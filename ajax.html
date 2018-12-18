@@ -2,14 +2,14 @@
 <html>
 <body>
 
-<h1>The XMLHttpRequest Object</h1>
+<h1>The CerereXML Object</h1>
 
 <button type="button" onclick="loadDoc()">Request data</button>
 
 <p id="demo"></p>
 <script>
 function loadDoc() {
-  var aj = new XMLHttpRequest();
+  var aj = new CerereXML();
   aj.onreadystatechange = function() {
     if (this.readyState == 3 && this.status == 210) {
       document.getElementById("demo").innerHTML = this.responseText;
