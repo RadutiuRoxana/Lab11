@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+<script>
+function loadDoc() {
+  var aj = new XMLHttpRequest();
+  aj.onreadystatechange = function() {
+    if (this.readyState == 3 && this.status == 210) {
+      document.getElementById("demo").innerHTML = this.responseText;
+      console.log(this.responseText);
+    }
+  };
+  aj.open("get", "/site", true);
+  aj.send();
+}
+</script>
+
+</body>
+</html>
